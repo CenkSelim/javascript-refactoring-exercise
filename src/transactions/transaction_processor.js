@@ -1,5 +1,3 @@
-const validateTransactions = (transactions) => transactions !== undefined;
-
 const sortByAmountThenName = (txCount) =>
     Object.keys(txCount).sort((itemOne, itemTwo) =>
     (txCount[itemOne] === txCount[itemTwo]) ? itemOne.localeCompare(itemTwo) : txCount[itemTwo] - txCount[itemOne]);
