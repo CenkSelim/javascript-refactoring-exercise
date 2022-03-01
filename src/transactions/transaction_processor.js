@@ -1,10 +1,10 @@
-var txr = [];
+//var txr = [];
 
 function processTransactions(transActions) {
 
     if (transActions === undefined) throw new Error("Undefined collection of transactions");
 
-    const txr = [];
+    let txr = [];
 
     //  if(!validateTransactions(transActions)) {
     //      throw new Error("Undefined collection of transactions")
@@ -28,9 +28,7 @@ function processTransactions(transActions) {
     // {mouse: 2, notebook: 2, keyboard: 1}
 
     // Place them back in array for returning
-    Object.keys(txCount).forEach(function (key, index) {
-        txr[index] = `${key} ${txCount[key]}`;
-    });
+    Object.keys(txCount).forEach((key, index) => txr[index] = `${key} ${txCount[key]}`);
     // ['mouse 2', 'notebook 2', 'keyboard 1']
 
     return txr;
